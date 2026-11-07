@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#140800">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="48dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Setup" android:textSize="32sp" android:textStyle="bold"
+            android:textColor="#FFFF8C00" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:textColor="#FFDDDDDD" android:textSize="15sp"
+            android:text="This launcher starts RetroArch with an arcade core and your own NBA Jam T.E. ROM set (nbajamte.zip). In RetroArch: Main Menu &gt; Load Core &gt; Download a Core &gt; Arcade (MAME 2003-Plus). Then copy nbajamte.zip to the TV and set its path below." />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="ROM file" android:textColor="#FFFFFFFF" />
+        <EditText android:id="@+id/rom" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:textColor="#FFFFFFFF" android:inputType="textUri" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="RetroArch core" android:textColor="#FFFFFFFF" />
+        <RadioGroup android:id="@+id/cores" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <RadioButton android:id="@+id/core_mame2003p" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#FFFFFFFF"
+                android:text="Arcade (MAME 2003-Plus) - recommended" />
+            <RadioButton android:id="@+id/core_mame" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="#FFFFFFFF"
+                android:text="Arcade (MAME - current) - needs a matching modern ROM set" />
+        </RadioGroup>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:orientation="horizontal">
+            <Button android:id="@+id/save" android:layout_width="200dp" android:layout_height="56dp"
+                android:text="SAVE" android:textColor="#FFFFFF" android:background="@drawable/btn" />
+            <Button android:id="@+id/getra" android:layout_width="260dp" android:layout_height="56dp"
+                android:layout_marginLeft="16dp" android:text="GET RETROARCH"
+                android:textColor="#FFFFFF" android:background="@drawable/btn" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
